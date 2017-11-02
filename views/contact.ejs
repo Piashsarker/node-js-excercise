@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+
+<head>
+ <link href = "/assests/styles.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+<body>
+    <% include partials/nav.ejs %>
+   <h1> Contact us </h1>
+   <p> For contact me , try => piash@dcastalia.com</p>
+
+<p><%= qs.dept%>  </p>
+<p><%= qs.person%>  </p>
+<form id="contact-form" method="POST" action="/contact">
+  <label for="who">Who do you what to contact? </label></br>
+    <input type="text" name="who" value="<%=qs.person%>"> </br>
+    <label for="department">Which department? </label></br>
+    <input type="text" name = "department" value="<%=qs.dept%>">> </br>
+    <label for="email">Your email</label></br>
+    <input type="email" name="email"> </br>
+    <input type="submit" value="submit"></br>
+
+</form>
+
+
+</body>
+
+</html>
